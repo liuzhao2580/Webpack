@@ -33,5 +33,18 @@ module.exports = {
             // 设置需要打包的文件路径
             template: "./public/index.html"
         })
-    ]
+    ],
+    module: {
+        // 配置用来解析 .css文件的 loader
+        rules: [
+            {
+                // 用正则匹配当前 .css 结尾的文件
+                // webpack 底层调用这些包的顺序是从右到左的管道顺序
+                test: /\.css$/,
+                // css-loader 用来解析 css 文件 
+                // style-loader 将解析的结果放到html中, 使其生效
+                use: ["style-loader", "css-loader"]
+            }
+        ]
+    }
 }

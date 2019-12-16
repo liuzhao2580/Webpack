@@ -1,0 +1,7 @@
+{
+    "loader": "babel-loader",
+    "options": {
+        "presets": ["@babel/env"],
+        "plugin": ["@babel/plugin-proposal-class-properties"]
+    }
+}

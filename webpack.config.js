@@ -44,6 +44,16 @@ module.exports = {
                 // css-loader 用来解析 css 文件 
                 // style-loader 将解析的结果放到html中, 使其生效
                 use: ["style-loader", "css-loader"]
+            },
+            // 配置用来解析 .less 文件
+            {
+                test: /\.less$/,
+                use: ["style-loader", "css-loader", "less-loader"]
+            },
+            // 配置用来解析 .scss .sass 文件
+            {
+                test: /\.s(a|c)ss$/,
+                use: ["style-loader", "css-loader", "sass-loader"]
             }
         ]
     }

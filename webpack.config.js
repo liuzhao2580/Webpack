@@ -1,5 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const CleanWebpackPlugin = require("clean-webpack-plugin")
 module.exports = {
     // 入口文件的配置
     entry: "./src/index.js",
@@ -32,7 +33,9 @@ module.exports = {
             filename: "index.html",
             // 设置需要打包的文件路径
             template: "./public/index.html"
-        })
+        }),
+        // 使用 clean-webpack-plugin 插件
+        new CleanWebpackPlugin()
     ],
     module: {
         // 配置用来解析 .css文件的 loader

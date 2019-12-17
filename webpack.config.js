@@ -85,7 +85,25 @@ module.exports = {
                         name: '[name]-[hash:8].[ext]'
                     }
                 }]
-            }
+            },
+            // 设置字体文件
+            {
+                test: /\.(woff|ttf|eot|svg)$/,
+                use: ["file-loader"]
+            },
+            // 配置 处理高级 js 的语法
+            // {
+            //     test: /\.js$/,
+            //     use: [
+            //         {
+            //             loader: "babel-loader",
+            //             options: {
+            //                 presets: ["@babel/env"],
+            //                 plugin: ["@babel/plugin-proposal-class-properties"]
+            //             }
+            //         }
+            //     ]
+            // }
         ]
     }
 }

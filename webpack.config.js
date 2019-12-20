@@ -1,6 +1,6 @@
 const path = require('path')
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const CleanWebpackPlugin = require("clean-webpack-plugin")
+const {CleanWebpackPlugin} = require("clean-webpack-plugin")
 module.exports = {
     // 入口文件的配置
     entry: "./src/index.js",
@@ -104,6 +104,12 @@ module.exports = {
             //         }
             //     ]
             // }
+
+            // 使用 html-withimg-loader 用来配置从html导入的图片
+            {
+                test: /\.(htm|html)$/i,
+                loader: "html-withimg-loader"
+            }
         ]
     }
 }

@@ -27,7 +27,7 @@ module.exports = {
         contentBase: "./public" // 配置默认的入口文件  默认的是 / 项目根目录
     },
     plugins: [
-        // // 配置 html-webpack-plugin 
+        // 配置 html-webpack-plugin 
         new HtmlWebpackPlugin({
             // 设置打包的文件名称
             filename: "index.html",
@@ -106,10 +106,10 @@ module.exports = {
             // }
 
             // 使用 html-withimg-loader 用来配置从html导入的图片
-            {
-                test: /\.(htm|html)$/i,
-                loader: "html-withimg-loader"
-            }
+            // {
+            //     test: /\.(htm|html)$/i,
+            //     loader: "html-withimg-loader"
+            // }
         ]
     }
 }
